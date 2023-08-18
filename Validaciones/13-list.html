@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>The input list attribute</h1>
+    <p>The list attribute refers to a datalist element that contains pre-defined options</p>
+
+    <form action="/action_page.php">
+        <input list="browsers" name="browsers">
+        <datalist id="browsers">
+        <option value="Internet explorer">
+            <option value="Firefox">
+                <option value="Chrome">
+                    <option value="Opera">
+                      <option value="safari">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p><b>Note:</b>The datalist tag is not supported in Safari 12.0 (or earlier)</p>

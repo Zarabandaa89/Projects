@@ -1,0 +1,26 @@
+<!--el minimo y maximo para ingresar algun dato-->
+<!--The minimum and maximum to enter some data-->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>the input min and max attribute</h1>
+
+<p>the min and max attributes specify the minimun an maximun values for an input element</p>
+
+<form action="/action_page.php">
+    <label for="datemax">Enter a date before 1980-01-01:</label><br>
+    <input type="date" id="datemax" name="datemax" value="1979-12-31"><br><br>
+    
+    <label for="datemin">Enter a date after 2000-01-01:</label><br>
+    <input type="date" id="datemin" name="datemin" value="2000-01-02"><br><br>
+    
+    <label for="quantity">Quantity (between 1 and 5):</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+
+    <input type="submit" value="submit">
+    
+</form>
+</body>
+</html>

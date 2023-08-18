@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>The input pattern attribute</h1>
+    <p>the pattern attribute specify a regular expresion that input element's values is checked against.</p>
+
+    <form action="/action_page.php">
+        <label for="country_code">country code:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+        <input type="submit" value="submit">
+
+    <p><strong>Note:</strong>The Pattern attribute of the input tag is not supported in safari 10 (or earlier)</p>
+    </form>
