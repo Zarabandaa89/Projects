@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/major.css' %}">
+
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Prosiembra.com</title>
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="https://static.vecteezy.com/system/resources/previews/014/212/681/non_2x/female-user-profile-avatar-is-a-woman-a-character-for-a-screen-saver-with-emotions-for-website-and-mobile-app-design-illustration-on-a-white-isolated-background-vector.jpg" alt="img-avatar">
+                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                    </button>
+                </div>
+                <button type="button" class="boton-portada">
+                    <i class="far fa-image"></i> Cambiar fondo
+                </button>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">Maria Alejandra</h3>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><i class="icono icon-home"></i> Direccion de usuario:</li>
+                    <li><i class="icono icon-phone"></i> Telefono:</li>
+                    <li><i class="icono icon-office"></i> Fecha De Nacimiento.</li>
+                    <li><i class="icono icon-user-tie"></i> Ubicacion</li>
+                </div>
+                <table >
+                    <caption>Contenido nutricional por cada 100 g de alimento.</caption>
+                    <tr> <th>Alimento</th> <th>Calorías (kCal)</th> <th>Grasas (g)</th>
+                    <th>Proteína (g)</th> <th>Carbohidratos (g)</th>
+                    </tr>
+                    <tr> <td>Arándano</td> <td>49</td> <td>0.2</td>
+                    <td>0.4</td> <td>12.7</td>
+                    </tr>
+                    <tr> <td>Plátano</td> <td>90</td> <td>0.3</td>
+                    <td>1.0</td> <td>23.5</td>
+                    </tr>
+                    <tr> <td>Cereza</td> <td>46</td> <td>0.4</td>
+                    <td>0.9</td> <td>10.9</td>
+                    </tr>
+                    <tr> <td>Fresa</td> <td>37</td> <td>0.5</td>
+                    <td>0.8</td> <td>8.3</td>
+                    </tr>
+                    </table>
+
+                    <table id="calendar">
+                        <thead>
+                        <caption> </caption>
+                        <tr>
+                           <th>
+                                     Lun
+                           </th>
+                           <th>
+                                     Mar
+                           </th>
+                           <th>
+                                     Mie
+                           </th>
+                           <th>
+                                     Jue
+                           </th>
+                           <th>
+                                     Vie
+                           </th>
+                           <th>
+                                     Sab
+                           </th>
+                           <th>
+                                     Dom
+                           </th>
+                       </tr>
+                      </thead>
+                  <tbody> </tbody>
+                      </table>
+    </section>

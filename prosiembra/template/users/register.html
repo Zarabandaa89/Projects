@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+
+    <title>Prosiembra</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <div class="registrar">
+    <form method="post">
+        {% csrf_token %}
+        <h1>Registro Usuario <br>Nuevo</h1>
+
+
+
+        <div class="input-contenedor">
+            <i class='bx bxs-user'></i>
+            <input type="text" name="name" placeholder="Nombre Completo" required>
+        </div>
+
+
+
+        <div class="input-contenedor">
+            <i class='bx bxs-envelope'></i>
+            <input type="text" name="email" placeholder="Correo Electronico" required>
+            </div>
+
+
+        <div class="input-contenedor">
+            <i class='bx bx-key'></i>
+            <input type="password" name="password" placeholder="Contraseña" required>
+        </div>
+
+        
+        <input type="submit" value="Registrate" class="button">
+        <div class="login-link">
+        <p>¿Ya tienes una cuenta?<br><a href="#">Iniciar Sesion</a></p>
+            </div>
+    </div>
+    </form>
+</body>
+</html>
