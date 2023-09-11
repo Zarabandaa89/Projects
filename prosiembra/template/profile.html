@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+    <title>Prosiembra</title>
+</head>
+<body>
+    <script type="text/javascript"
+        src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vvhDxFzJqEyri7T8VAg0X_8sKOviaKCwBWcrocIFVgvKTCmr9A_GbSoc34VljIPwxU2x39EZO-k9waWhp05s19zZsLE04z8nHFFm3uZ6qJclSsDJ1oFA2tHJ4CJkadaIaQJHQQFz7JVCx7zMfN_luBtGb-6XLsu_6kF1jLc1EcWauUcraOd-1QA7--xCvcn4upB4j3IJxeKI4hbqRQ6pg7PnqxI4bptxFiHwI3EhhoJ-xT7ffDIn6CQu8pNZCdo75p7noPjITbbV5dm05RL_iA2xYtHv9urf89mZgI5EtZdfQbcFB0CTycPDjlUo2pXy7cjL-kxTMFp6cGcEOsJPqW9E-5acM9AFN6XJh9A_pKZCdnIkwQcWeH9BHfFX6P89TSPaQt5ig4u_2Iqjdia-uPfkAf_4CeLkHYVUZdc6w6y82irNsRO7NvkpaoatdP8Ube2B96ZoQBKQ-C--IEbOoYLnWHS6CnvlW6OCN0GCEYxGAOTdLpNghL8-HMFLoM8_DAYaqPfeCO-ym3nqkFaOXw2PCpWD5eTPHk3LMadTEtb6iKtTNuko2vKKd4CtMUaBVM7p4baMb14nbNgBDgDHsrlVaxPVeg-iNB0iQcgaVhOPphWfC0SAOkC2T955W40rzzuLS0vJ5HUySCyv4fU-VRhPB9-_ARtnydt5DcHPAmjztZLeUf0_9VOCX5DOVCgCdukv4VguT0Nxdr4P-JRFQlwpY5kCWi8wXY6Y7ztE57B77Q8P2OF6IYBZuhYMB0KewQ6XvDXc8iqxEusUjrJ7TgZegZFxWLYN6nzPvq59nf3Kqn-MBnQa0GIZhwwa2j7FZxR5XScSCxjY2kvmmbXnNLiHUYHEdSgICAkUqXjAZNMN_WX2MJUOA6C57uXJeksY0bzaa1c7V6VGbuJoqa0om4M9s07JadblhAypecyyMdlTbHRPMlHmImL_tlJUohZd1pP4galYmKC9aYS_16dzv23lZW42Nxs_NJkA6Gi4iLK0U5eev2QiCVeSpRtfHUgXh94_hQ3JNro_Qp7ue5PHbycNoj88T4dqC8PoehharBDJGXGo3NiPO5_yFGFH6gIKjBY8YDEfXKafV-Oqc3neI-SvxSd9hjPF4aBtYaH78tUATELto0LA3-P7Q4vzOzTZm1F7pCHrFjgULzVuzJE6ThnAsvKofj2Gd1jZPvRBJzGC7YALSv1nUCysYvPf8Ri8o_d-BYmjN4v6p9cW7xy7XkOH_VvIPiBokNS6yJQpWBy7P0vmZvkbmYn84IAHtIKjGfp5zWMbW705awHBSbsioMW-b1FLuqlgPelSdvlhQDweGDoEd1dC7VZixpBLKG3ZEdDk-ok__qVpt_bkhYj2Ahf_YZB-wlPInYS_isFF23CgDE5p5W6RbCvoDKeMeH8hJNBn3nd7hjvmeqzUQm34cOdVz1di9-aXrjuJ7FxC8XKfU0ClHs-WtLzwPuzi6oyxjyKMCnazAoX-an6Cxf67LO7O3-RJlz-05LdOCo922oWzk8qL0B1MQZSsnlbLN1Lx4nA9r1DzOJbVYOz09wJ3LJA8ChwAYvPL7_VaSqxXVBhNFp75XVSR4oK5R90kmTsclk0JYDOReNpxBElJlmf7F9aOFm3Hw-NUIPOyLogzOpgv_KwVJBOdVQNJvTxj4DpR"
+        nonce="db84aeeb008279418376afb7a4178edf" charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous"
+        href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTc2YmE5M2M0Y2ImYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNzc2NDAzOTYwODc4NzE2ODkxJnRoPTE4YTcwZGZkOTljNWQ3ZGImdmlldz1hdHQmZGlzcD1zYWZlJnNhZGRiYXQ9QU5HamRKX1JWeWk1SS10azItUXRaQk1xa2QwMklKNXdQeHR2VUdNZnNBcFVyQWRVNV9pY3AxZkk5VWxwVVljNVhUdWlwb3ZiR2tOUFBxeE8xUUtKUlFveHpWN0M4a0MteFpRUnpRVC1jOGkzQWI3ZHBnODhHeHlBSVg4QUlidW9qX05SZV9EbU5vZjhEZDM3aWdOOGNKUGZKbTBDS0pGeUJlWDRMbnNCaTA3eGFFWkxFeVIyenRkT2xwNy01NU9ZTzNoX2sxZE1pN1ZEbjdJbjVGZ2dFaFphVjRzNnRyMDBRb1k0R0xJSl84ZGZESlhqdG9GSEl0UlpRODVlN2NpSU92TkJkOVpaVlBNWTZHRXU0RkN1YWlyQ3owcmJ1MTdvNllNT090TFFGSS1nS3VxVkpBU2NIVzdtcHJxRVo5VXpVMFZaSFpOSGpnVGZObUpYbW9RYUVtYUUyZ19CQVdrd1JneVI5dW5lY3NPRjVZQmNDOXA4UURrc0tJYm1BckNETlY0QS03MUY5b1R2d1BSNzczY1NBMXJpSnZzQlR0UGRjNUxiclhCb3owV1daZ1huZ1NKSGhuX2dxWnJVRDhkcHhFTjltOXdqZ3dxV0Q2SlNfZXQ3ZlFMMjhoU29VdXo0WldzMjk1U0hwVlJkZlZWczNYSUNrRjN6enRBeEo1Sjd3S3FKTXdyQ1VodFc5YTNQUmNYVWE2ZVBUUzg1UWZLMndQN2FOQjJkcTc4YmlxRGY5akV0ZXVSMFh3SVJzNG5yTHZfNkpuYkdyVENsOXZPa21HV1VPNmExc0lfRmVReFJEei1FcVF5bmhYSnU5dlROaWtnRllEV3dUa0NHSng2UFg3eE9vNm0wU0dIYV9QdnBSUjVYU3BKb1JWZ3V6RDNDTHd1d280ZUpZN1BXc2RQR0s0NENuMWxjbVZyckRJOS1OOHZpZ3poZ2hLcXlWWmgwQXF2UzZvVVpWaEpsaHdxTUVTZG84UkhJMk5zNXYyemJqc1p3a19QN3JKSXRUZE9meE1Jc19FaFluY3pHQW83dWluTVZKb1l1ZjhVdjZyOVVtR05VTEN5MDNWMlNvbFdQX09vLUVPbUpCMWE3TWhWd2l1bkNDSHhCMHdwR25hX01qbTNSNGRQa1dMLW53eEpDOWRvQTBIbGdReGRqNW85MnVuVVVQeWJQSEJzM0xoYnlXSng1RnEzZW1zQUdMdTBzMjZmYzc1Qkk5eF8wYVRoZThFN0xiQUVjMWRfX1JhVEtWNGNUQ1dHQjhvc3BXclM3ZFQzUmtMbnFBajFCQlpKdUE2V1M3UGNpc1dhX01pMnpjZllIdnluODNocXczeWphelhzVFJtTVJ2RVdXQnBPaGgtSkZfTjVBY0xrdThDSmdIckJC" />
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada" id="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="https://static.vecteezy.com/system/resources/previews/014/212/681/non_2x/female-user-profile-avatar-is-a-woman-a-character-for-a-screen-saver-with-emotions-for-website-and-mobile-app-design-illustration-on-a-white-isolated-background-vector.jpg"
+                        alt="img-avatar">
+                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                    </button>
+                </div>
+                <button type="button" class="btn" onclick="cambiarFondo()">Cambiar fondo</button>
+                <script>
+                function cambiarFondo(){
+                    var div = document.getElementById('perfil-usuario-portada');
+                    Perfil.style.backgroundColor = 'black';
+                }
+                </script>
+                <button type="button" class="bcita">Generar cita</button> 
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">Maria Alejandra</h3>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><i class="icono icon-home"></i> Direccion de usuario:</li>
+                    <li><i class="icono icon-phone"></i> Telefono:</li>
+                    <li><i class="icono icon-office"></i> Fecha De Nacimiento.</li>
+                    <li><i class="icono icon-user-tie"></i> Ubicacion</li>
+            </div>
+            <table>
+                <caption>Contenido nutricional por cada 100 g de alimento.</caption>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Calorías (kCal)</th>
+                    <th>Grasas (g)</th>
+                    <th>Proteína (g)</th>
+                    <th>Carbohidratos (g)</th>
+                </tr>
+                <tr>
+                    <td>Arándano</td>
+                    <td>49</td>
+                    <td>0.2</td>
+                    <td>0.4</td>
+                    <td>12.7</td>
+                </tr>
+                <tr>
+                    <td>Plátano</td>
+                    <td>90</td>
+                    <td>0.3</td>
+                    <td>1.0</td>
+                    <td>23.5</td>
+                </tr>
+                <tr>
+                    <td>Cereza</td>
+                    <td>46</td>
+                    <td>0.4</td>
+                    <td>0.9</td>
+                    <td>10.9</td>
+                </tr>
+                <tr>
+                    <td>Fresa</td>
+                    <td>37</td>
+                    <td>0.5</td>
+                    <td>0.8</td>
+                    <td>8.3</td>
+                </tr> 
+                     
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Prosiembra.com</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{% static 'images/logo.jpg' %}" alt="Logo de la empresa">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'profile'%}" title="Mi Perfil">Mi Perfil</a></li>
+                <li><a href="{% url 'we' %}" title="Nosotros">Nosotros</a></li>
+                <li><a href="{% url 'products' %}" title="Productos">Productos</a></li>
+            </ul>
+        </nav>
+        <a href="{% url 'logout' %}" class="btn"><button>Cerrar Sesión</button></a>
+    </header>
+    <section>
+        <img src="{% static 'images/img3.jpg' %}" alt="galeria fotos3">
+        <img src="{% static 'images/img4.jpg' %}" alt="galeria fotos4">
+        <img src="{% static 'images/img1.jpg' %}" alt="galeria fotos1">
+        <img src="{% static 'images/img5.jpg' %}" alt="galeria fotos5">
+    </section>
+    </div>
+    <div class="caja-negra">
+        <p>Contacto</p>
+        <a href="https://www.facebook.com/fundacionprosiembra">
+            <i class='bx bxl-facebook-circle'></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+57310777392">
+            <i class='bx bxl-whatsapp'></i>
+        </a>
+        <a href="mailto:fundacionprosiembra@gmail.com.">
+            <i class='bx bx-envelope'></i>
+        </a>
+        <a href="https://www.instagram.com/f.prosiembra/">
+            <i class='bx bxl-instagram'></i>
+        </a>
+        <a href="{% url 'customer'%}">
+        <p class="pq">Solicitud PQR'S aqui</p>
+    </a>
+        <ol class="lista">
+            <li>Peticones</li>
+            <li>Quejas</li>
+            <li>Reclamos</li>
+            <li>Sugerencias</li>
+        </ol>
+    <a href="https://www.google.com/maps/place/Org%C3%A1n%C3%ADco/@4.6197658,-74.0719676,3a,75y,236.22h,100.72t/data=!3m6!1e1!3m4!1sZEU12-JrtGhlwHr2xYa8Jw!2e0!7i16384!8i8192!4m9!1m2!2m1!1sestacion+calle+26!3m5!1s0x8e3f99839a353505:0x8a4b7c190dc10eb8!8m2!3d4.6197155!4d-74.0721518!16s%2Fg%2F11j130sk5k?entry=ttu" class="maps">
+        Nuestra Sede</a>
+        <ul class="direccion">
+            <li>Calle 31a #16-23</li>
+            </ul>
+    </div>
+</body>
+
+</html>

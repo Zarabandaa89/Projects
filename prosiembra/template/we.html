@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/we.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Prosiembra</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{% static 'images/logo.jpg' %}" alt="Logo de la empresa">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'main' %}" title="Nosotros">Inicio</a></li>
+                <li><a href="{% url 'profile'%}" title="Inicio">Mi Perfil</a></li>
+                <li><a href="{% url 'products' %}" title="Productos">Productos</a></li>
+            </ul>
+        </nav>
+        <a href="{% url 'logout' %}" class="btn"><button>Cerrar Sesión</button></a>
+    </header>
+    <h1 class="nosotros animate__animated animate__pulse">Nosotros</h1>
+    <p class="nosotros1 ">Somos ProSiembra, una parte vital de una red de más de 70 familias productoras comprometidas
+        <br> con la agricultura orgánica
+        y la producción limpia en Colombia. Nuestra tienda orgánica es una representación diversa de estas familias, que
+        incluye a
+        custodios de semillas, guardianes de fuentes de agua, productores de alimentos tradicionales y artesanos
+        dedicados a la
+        promoción de redes de educación, investigación y cuidado en sus comunidades.
+    </p><br><br><br>
+    <img src="{% static 'images/img7.png'%}" alt="mi imagen 7" class="img7 animate__animated animate__pulse">
+
+
+    <h1 class="misión animate__animated animate__pulse">Misión</h1>
+    <p class="misión1">Nuestro propósito es acercar los maravillosos frutos del trabajo de estas familias, en su mayoría
+        <br>
+        rurales y de pequeña escala, a los hogares urbanos.
+        Queremos apoyar tanto a las comunidades <br> rurales como a los habitantes urbanos, satisfaciendo la creciente
+        demanda de alimentos saludables <br> y promoviendo
+        un estilo de vida sostenible.</p><br><br><br>
+    <img src="{% static 'images/img8.png'%}" alt="mi imagen 8" class="img8 animate__animated animate__pulse">
+
+
+
+    <h1 class="alimentos animate__animated animate__pulse">Alimentos Limpios y Tradicionales</h1>
+    <p class="alimentos1">Promovemos el consumo de alimentos limpios y tradicionales, lo que impulsa a nuestras
+        comunidades productoras y
+        transformadoras a seguir haciendo un trabajo excepcional.
+        Nuestro compromiso es clave para mantener la salud, el conocimiento sobre la economía campesina y tradicional, y
+        otros aspectos esenciales.</p><br><br><br>
+    <img src="{% static 'images/img9.png'%}" alt="mi imagen 9" class="img9 animate__animated animate__pulse">
+
+
+
+
+    <h1 class="sol animate__animated animate__pulse">Solidaridad y Colaboración</h1>
+    <p class="sol1">En ProSiembra, nos fusionamos con nuestra red de apoyos, incluyendo a cada persona <br> que elige comprar
+        nuestros
+        productos. Promovemos la salud, la solidaridad y el <br>bienestar en cada paso de
+        nuestra cadena de suministro. Desde  la ciudad, facilitamos la <br> logística de productos provenientes de diversas
+        comunidades en Colombia, asegurando <br> recursos justos que les
+        permiten sostener sus modos de vida dignos..</p><br><br><br>
+    <img src="{% static 'images/img10.png'%}" alt="mi imagen 10" class="img10 animate__animated animate__pulse">
+
+
+
+    <h1 class="led animate__animated animate__pulse" >Legado y Valores</h1>
+    <p class="led1">Nuestra organización se basa en tres pilares: orgánico, consciente y solidario. Abogamos por la agricultura
+        orgánica, reduciendo el impacto ambiental y promoviendo la salud. <br> Nos esforzamos
+        por ser conscientes en nuestro trabajo, conectando la producción con la sostenibilidad y el valor de la vida.
+        Además, fomentamos un enfoque económico solidario, <br> donde las iniciativas socioeconómicas
+        y culturales se basan en la colaboración y la propiedad colectiva de los bienes, en lugar de lucro puro.Unidos
+        en nuestro compromiso <br> con la comunidad y el planeta, ProSiembra está aquí para brindarte alimentos de calidad y
+        productos sostenibles, contribuyendo al bienestar de todos.</p><br><br><br>
+        <img src="{% static 'images/img11.png'%}" alt="mi imagen 11" class="img11 animate__animated animate__pulse">
+
+
+        <div class="caja-negra">
+            <p>Contacto</p>
+            <a href="https://www.facebook.com/fundacionprosiembra">
+                <i class='bx bxl-facebook-circle'></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+57310777392">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="mailto:fundacionprosiembra@gmail.com.">
+                <i class='bx bx-envelope'></i>
+            </a>
+            <a href="https://www.instagram.com/f.prosiembra/">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="{% url 'customer'%}">
+                <p class="pq">Solicitud PQR'S aqui</p>
+            </a>
+                <ol class="lista">
+                    <li>Peticones</li>
+                    <li>Quejas</li>
+                    <li>Reclamos</li>
+                    <li>Sugerencias</li>
+                </ol>
+            <a href="https://www.google.com/maps/place/Org%C3%A1n%C3%ADco/@4.6197658,-74.0719676,3a,75y,236.22h,100.72t/data=!3m6!1e1!3m4!1sZEU12-JrtGhlwHr2xYa8Jw!2e0!7i16384!8i8192!4m9!1m2!2m1!1sestacion+calle+26!3m5!1s0x8e3f99839a353505:0x8a4b7c190dc10eb8!8m2!3d4.6197155!4d-74.0721518!16s%2Fg%2F11j130sk5k?entry=ttu" class="maps">
+                Nuestra Sede</a>
+                <ul class="direccion">
+                    <li>Calle 31a #16-23</li>
+                    </ul>
+        </div>
+    </body>
+
+</html>
