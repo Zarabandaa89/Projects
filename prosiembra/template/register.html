@@ -18,32 +18,14 @@
     <form method="post">
         {% csrf_token %}
         <h1 class="animate__animated animate__zoomIn">Registro Usuario <br>Nuevo</h1>
+        
 
+        {{ form }}
 
-        <div class="input-contenedor animate__animated animate__zoomIn">
-            <i class='bx bxs-user'></i>
-            <input type="text" name="name" placeholder="Nombre Completo" required>
-        </div>
-
-
-
-        <div class="input-contenedor animate__animated animate__zoomIn">
-            <i class='bx bxs-envelope'></i>
-            <input type="text" name="email" placeholder="Correo Electronico" required>
-            </div>
-
-
-        <div class="input-contenedor animate__animated animate__zoomIn">
-            <i class='bx bx-key'></i>
-            <input type="password" name="password1" placeholder="Contraseña" required>
-        </div>
-
-
-        <div class="input-contenedor animate__animated animate__zoomIn">
-            <i class='bx bx-key'></i>
-            <input type="password" name="password2" placeholder="Confirmar Contraseña" required>
-        </div>
-
+        
+        {% if field.errors %}
+            {{ field.errors }}
+        {% endif %}
         
         <input type="submit" value="Registrate" class="button animate__animated animate__zoomIn">
         <div class="login-link animate__animated animate__zoomIn">

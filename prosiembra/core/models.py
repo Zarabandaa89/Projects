@@ -7,7 +7,7 @@ class Inventory(models.Model):
     batches_products = models.FloatField(verbose_name= 'Numero lotes de productos')
     expiration_date = models.DateField(verbose_name= 'Fecha vencimiento')
 
-    def str(self):
+    def __str__(self):
         return self.purchase_order
     
     class Meta:
@@ -26,7 +26,7 @@ class Product(models.Model):
     quantity = models.FloatField(verbose_name='Cantidad')
     type_presentation = models.CharField(max_length=80, verbose_name='Tipo de presentación', default='default_value')
 
-    def str(self):
+    def __str__(self):
         return self.name
     
     class Meta:
@@ -43,7 +43,7 @@ class Rendezvous(models.Model):
     appointment_status = models.CharField(max_length=100, verbose_name= 'Estado de cita')
     location = models.CharField(max_length=100, verbose_name= 'Ubicacion')
     appointment_type = models.CharField( max_length=100, verbose_name= 'Tipo de cita')
-    def str(self):
+    def __str__(self):
         return self.date_time
     
     class Meta:
@@ -65,8 +65,8 @@ class Sale(models.Model):
     order_number = models.FloatField(verbose_name= 'Numero de orden')
     
     
-    def str(self):
-        return self.date_sale
+    def __str__(self):
+        return self.name
     
     class Meta:
         verbose_name = 'Venta'
@@ -84,7 +84,7 @@ class Customer_Service(models.Model):
     priority = models.CharField(max_length=100, verbose_name= 'Prioridad')
     
     
-    def str(self):
+    def __str__(self):
         return self.application_date_pqrs
     
     class Meta:

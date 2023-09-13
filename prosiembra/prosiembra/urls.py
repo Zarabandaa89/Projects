@@ -4,9 +4,12 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls,),
-    path('', views.index, name='index'),
     path('login/', views.login_view, name='login'),
-    path('register/', views.register_view, name='register'),
+    path('login/register.html', views.register, name= 'login a registro'),
+    path('login/login', views.login_view),
+    path('', views.register, name='register'),
+    path('login/register.htmls', views.register),
+    #path('/login.html', views.login_view),
     path('products/', views.products_view, name='products'),
     path('profile/', views.profile_view, name='profile'),
     path('customer_service/', views.customer_service_view, name='customer'),

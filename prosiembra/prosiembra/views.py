@@ -4,13 +4,65 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate
 from django.contrib import messages
+from .forms import RegisterForm
+from django.contrib.auth.models import User
 
 
-def index(request):
+
+def register(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            names = form.cleaned_data.get('names')
+            username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            
+            
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.first_name = names
+            user.last_name = username
+            user.save()
+            
+            login(request, user)
+            
+            messages.success(request, '')
+            
+            return redirect('main')
+    else:
+        form = RegisterForm()
+
     return render(request, 'register.html', {
-        # contexto
+        'form': form
     })
 
+
+def register_login(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            names = form.cleaned_data.get('names')
+            username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            
+            
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.first_name = names
+            user.last_name = username
+            user.save()
+            
+            login(request, user)
+            
+            messages.success(request, '')
+            
+            return redirect('register')
+    else:
+        form = RegisterForm()
+
+    return render(request, 'login.html', {
+        'form': form
+    })
 
 def login_view(request):
     if request.method == 'POST':
@@ -28,20 +80,37 @@ def login_view(request):
         else:
             messages.error(request, 'Usuario o contraseña incorrectos')
 
-        return render(request, 'login.html', {
-
-        })
-
     return render(request, 'login.html', {
 
     })
 
 
 def register_view(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            names = form.cleaned_data.get('names')
+            username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            
+            
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.first_name = names
+            user.last_name = username
+            user.save()
+            
+            login(request, user)
+            
+            messages.success(request, '')
+            
+            return redirect('login')
+    else:
+        form = RegisterForm()
+
     return render(request, 'register.html', {
-
+        'form': form
     })
-
 
 def products_view(request):
     return render(request, 'products.html')
