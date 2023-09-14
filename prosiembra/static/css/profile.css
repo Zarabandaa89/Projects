@@ -1,157 +1,170 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
 *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    
+    background-color: #e1ffd5 ;
 
 }
 
-.seccion-perfil-usuario .perfil-usuario-body,
-.seccion-perfil-usuario {
+
+.header{
+    background-color: #92b577;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    height: 85px;
+    padding: 5px 10%;
 }
 
-.seccion-perfil-usuario .perfil-usuario-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#000000, transparent);
-    margin-bottom: 1.25rem;
-}
-
-.seccion-perfil-usuario .perfil-usuario-portada {
-    display: block;
-    position: relative;
-    width: 90%;
-    height: 17rem;
-    background-image: linear-gradient(45deg, #e3fc02, #2e9633);
-    border-radius: 0 0 20px 20px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-portada .btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border: 0;
-    border-radius: 8px;
-    padding: 12px 25px;
-    background-color: rgba(0, 0, 0, .5);
-    color: #fff;
+.header .logo{
     cursor: pointer;
 }
 
-.seccion-perfil-usuario .perfil-usuario-portada .btn i {
-    margin-right: 1rem;
-}
 
-.seccion-perfil-usuario .perfil-usuario-avatar {
-    display: flex;
-    width: 180px;
-    height: 180px;
-    align-items: center;
-    justify-content: center;
-    border: 7px solid #FFFFFF;
-    background-color: #DFE5F2;
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+
+.header .logo img{
     position: absolute;
-    bottom: -40px;
-    left: calc(50% - 90px);
-    z-index: 1;
+    left: 75px;
+    top: 5px;
+    height: 70px;
+    width: auto;
+    border-radius: 1em;
+    transition: all 0.7s;
 }
 
-.seccion-perfil-usuario .perfil-usuario-avatar img {
-    width: 100%;
-    position: relative;
-    border-radius: 50%;
+.header .logo img:hover{
+    transform: scale(1.1);
 }
 
-.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    border: 0;
-    background-color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-}
 
-.seccion-perfil-usuario .perfil-usuario-body {
-    width: 70%;
-    position: relative;
-    max-width: 750px;
-}
-
-.seccion-perfil-usuario .perfil-usuario-body .titulo {
-    display: block;
-    width: 100%;
-    font-size: 1.75em;
-    margin-bottom: 0.5rem;
-}
-
-.seccion-perfil-usuario .perfil-usuario-body .texto {
-    color: #848484;
-    font-size: 0.95em;
-}
-
-.seccion-perfil-usuario .perfil-usuario-footer,
-.seccion-perfil-usuario .perfil-usuario-bio {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    background-color: #fff;
-    border-radius: 15px;
-    width: 100%;
-}
-
-.seccion-perfil-usuario .perfil-usuario-bio {
-    margin-bottom: 1.25rem;
-    text-align: center;
-}
-
-.seccion-perfil-usuario .lista-datos {
-    width: 50%;
+.header .nav-links{
     list-style: none;
 }
 
-.seccion-perfil-usuario .lista-datos li {
-    padding: 5px 0;
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+    transition: all 0.7s;
+    
 }
 
-.seccion-perfil-usuario .lista-datos li>.icono {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    vertical-align: middle;
+.header .nav-links li:hover{
+    transform: scale(1.3);
 }
 
-.seccion-perfil-usuario .redes-sociales {
+.header .nav-links a{
+    font-size: 700;
+    color: #090b0c;
+    text-decoration: none;
+    
+}
+
+
+.header .nav-links li a:hover{
+    color: blue;
+   
+    
+}
+
+
+.header .btn button{
+    font-weight: 700;
+    color: #000000;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: #e2f1f8;
+    color: #0800ff;
+    transform: scale(1.1);
+}
+
+
+#profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#cover-photo {
+    width: 100%;
+    height: 300px;
+    background-color:#fffd92;
+    background-size: cover;
+    background-position: center;
+}
+
+#profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-top: -75px;
+    margin-left: 20px;
+    background-image: url('https://th.bing.com/th/id/OIP.6HqwoVsrZWYgIOYU9-Be8QHaHa?pid=ImgDet&rs=1');
+    background-size: cover;
+    background-position: center;
+    float: left;
+}
+
+#profile-info {
+    margin-left: 200px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#post {
+    margin-top: 30px; /* Aumentar el margen superior para crear espacio en blanco grande */
+    padding: 20px; /* Aumentar el relleno para hacer el área de publicación más grande */
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#post p {
+    margin: 0;
+}
+
+#post-text{
+    width: 100%;
+    height: 200px; /* Establece la altura deseada para el textarea */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Permite que el textarea sea redimensionado verticalmente */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado de línea */
+    outline: none; /* Elimina el borde de enfoque */
+}
+
+#agendar-cita-button{
     position: absolute;
-    right: calc(0px - 50px - 1rem);
-    top: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-body {font-family: Arial, Helvetica, sans-serif;}
-
-table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-    font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse; }
-
-th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #18ff03;
-    border-top: 4px solid #3dff03;    border-bottom: 1px solid #fff; color: rgb(12, 12, 12); }
-
-td {    padding: 8px;     background: #2bff00;     border-bottom: 1px solid #fff;
-    color: rgb(0, 0, 0);    border-top: 1px solid transparent; }
-
-tr:hover td { background: #cfe411; color: rgb(15, 15, 15); }
-
-.bcita{
-    width: 180px;
-    height: 45px;
-    background-color: rgb(54, 209, 209);
+    left: 15px;
+    top: 90px;
+    background-color: #52f143;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
 }

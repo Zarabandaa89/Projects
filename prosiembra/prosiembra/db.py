@@ -15,7 +15,7 @@ MYSQL = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dbprosiembra',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '1019604589Sz.',
         'HOST': 'localhost',
         'PORT': '3306'
     }
